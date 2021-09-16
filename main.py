@@ -1,19 +1,20 @@
 from time import sleep
-# from conferences.common import *
 from conferences.ccs import CCS
 from conferences.ndss import NDSS
 from conferences.sec import SEC_FALL, SEC_SUMMER
 from conferences.snp import SnP
 
+from alarm_bot import alarm
 
 def check_update(conferences_list):
     while True:
-        flag = True
+        flag = False
         for conference in conferences_list:
-            if conference.check_update() == False:
-                flag = False
+            if conference.check_update() == True:
+                flag = True
+                alarm(conference)
         if flag == False:
-            sleep(86400) # 1 day
+            sleep(86400) # Every conference is up-to-data, sleep 1 day
         
 
 
