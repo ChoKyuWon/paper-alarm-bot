@@ -3,6 +3,7 @@ import requests
 
 class Conference:
     def __init__(self, _year):
+        self.papers = []
         self.year = _year
         self.update_url()
 

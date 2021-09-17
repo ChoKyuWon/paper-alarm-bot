@@ -1,3 +1,3 @@
 def alarm(conf):
-    print("alarm!")
+    conf.print_accepted_paper()
     pass

@@ -19,13 +19,13 @@ def check_update(conferences_list):
 
 
 def main():
-    init_year = 2022
+    init_year = 2021
     conferences_list = []
     conferences_list.append(CCS(init_year))
-    conferences_list.append(NDSS(init_year))
-    conferences_list.append(SEC_SUMMER(init_year))
-    conferences_list.append(SEC_FALL(init_year))
-    conferences_list.append(SnP(init_year))
+    # conferences_list.append(NDSS(init_year))
+    # conferences_list.append(SEC_SUMMER(init_year))
+    # conferences_list.append(SEC_FALL(init_year))
+    # conferences_list.append(SnP(init_year))
     check_update(conferences_list)
 
 if __name__ == '__main__':
